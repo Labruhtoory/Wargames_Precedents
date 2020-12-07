@@ -156,7 +156,7 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 
 
 
-					# keeping the kill
+					# keeping the hill
 
 '''
 rm -rf /home/bunny/simple-command-injection/*
