@@ -1,0 +1,77 @@
+# Nmap 7.91 scan initiated Mon Dec  7 01:02:04 2020 as: nmap -p 22,23,80,3000,9999 -sC -sV -v -oN nmapinit.txt 10.10.163.118
+Nmap scan report for 10.10.163.118
+Host is up (0.24s latency).
+
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 1d:f0:d5:f2:67:1e:55:99:de:c6:26:85:b3:86:ea:81 (RSA)
+|   256 4f:5f:62:98:aa:b1:dd:a2:81:61:16:9b:a5:29:cd:bd (ECDSA)
+|_  256 9b:12:b0:f3:1f:fb:b7:d8:a8:9c:6b:e6:bd:f4:40:55 (ED25519)
+23/tcp   open  telnet  Linux telnetd
+80/tcp   open  http    Apache httpd 2.4.18 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: OPTIONS GET HEAD POST
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Michael Jordan
+3000/tcp open  http    Node.js (Express middleware)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+9999/tcp open  http    Golang net/http server
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 200 OK
+|     Date: Mon, 07 Dec 2020 05:57:38 GMT
+|     Content-Length: 1
+|     Content-Type: text/plain; charset=utf-8
+|   GenericLines, Help, LPDString, RTSPRequest, SIPOptions, SSLSessionReq, Socks5: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain
+|     Connection: close
+|     Request
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Date: Mon, 07 Dec 2020 05:57:37 GMT
+|     Content-Length: 1
+|     Content-Type: text/plain; charset=utf-8
+|   OfficeScan: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain
+|     Connection: close
+|_    Request: missing required Host header
+|_http-favicon: Unknown favicon MD5: 68B329DA9893E34099C7D8AD5CB9C940
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9999-TCP:V=7.91%I=7%D=12/7%Time=5FCDC564%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,75,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Mon,\x2007\x20Dec\x2020
+SF:20\x2005:57:37\x20GMT\r\nContent-Length:\x201\r\nContent-Type:\x20text/
+SF:plain;\x20charset=utf-8\r\n\r\n\n")%r(HTTPOptions,75,"HTTP/1\.0\x20200\
+SF:x20OK\r\nDate:\x20Mon,\x2007\x20Dec\x202020\x2005:57:37\x20GMT\r\nConte
+SF:nt-Length:\x201\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\n\r\
+SF:n\n")%r(FourOhFourRequest,75,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Mon,\x
+SF:2007\x20Dec\x202020\x2005:57:38\x20GMT\r\nContent-Length:\x201\r\nConte
+SF:nt-Type:\x20text/plain;\x20charset=utf-8\r\n\r\n\n")%r(GenericLines,58,
+SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nC
+SF:onnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(RTSPRequest,58,"HT
+SF:TP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConn
+SF:ection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(Help,58,"HTTP/1\.1\x2
+SF:0400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\x2
+SF:0close\r\n\r\n400\x20Bad\x20Request")%r(SSLSessionReq,58,"HTTP/1\.1\x20
+SF:400\x20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\x20
+SF:close\r\n\r\n400\x20Bad\x20Request")%r(LPDString,58,"HTTP/1\.1\x20400\x
+SF:20Bad\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\x20close
+SF:\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,58,"HTTP/1\.1\x20400\x20Ba
+SF:d\x20Request\r\nContent-Type:\x20text/plain\r\nConnection:\x20close\r\n
+SF:\r\n400\x20Bad\x20Request")%r(Socks5,58,"HTTP/1\.1\x20400\x20Bad\x20Req
+SF:uest\r\nContent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\
+SF:x20Bad\x20Request")%r(OfficeScan,76,"HTTP/1\.1\x20400\x20Bad\x20Request
+SF:\r\nContent-Type:\x20text/plain\r\nConnection:\x20close\r\n\r\n400\x20B
+SF:ad\x20Request:\x20missing\x20required\x20Host\x20header");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Dec  7 01:02:52 2020 -- 1 IP address (1 host up) scanned in 48.06 seconds

