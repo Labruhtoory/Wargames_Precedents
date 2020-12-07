@@ -219,6 +219,7 @@ pass123
 /root/root.txt
 /home/bunny/simple-command-injection/
 /home/jordan/.ssh/id_rsa
+/home/jordan/easyaccess.py
 '''
 
 
