@@ -1,0 +1,101 @@
+# Nmap 7.91 scan initiated Sun Dec  6 19:01:33 2020 as: nmap -p 21,22,80,111,2049,3333,9999,39021,35215,39417,45077 -sC -sV -v -oN nmapinit.txt 10.10.16.30
+Nmap scan report for 10.10.16.30
+Host is up (0.19s latency).
+
+PORT      STATE SERVICE    VERSION
+21/tcp    open  ftp        vsftpd 3.0.3
+22/tcp    open  ssh        OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 3e:ae:18:87:b8:c3:35:b6:3a:af:0e:a4:c3:a2:ef:13 (RSA)
+|   256 42:cf:fe:0d:cb:92:24:b9:8f:dc:11:d4:10:a7:a0:3e (ECDSA)
+|_  256 5c:fc:bc:c9:3a:01:b1:b6:78:ac:66:3c:34:8f:22:2a (ED25519)
+80/tcp    open  http       Apache httpd 2.4.29 ((Ubuntu))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-favicon: Unknown favicon MD5: 0FCB7B4E683ADF2D2EE21691E052A73D
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Wheel of Fortune!
+111/tcp   open  rpcbind    2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100003  3           2049/udp   nfs
+|   100003  3           2049/udp6  nfs
+|   100003  3,4         2049/tcp   nfs
+|   100003  3,4         2049/tcp6  nfs
+|   100005  1,2,3      33589/tcp6  mountd
+|   100005  1,2,3      37448/udp   mountd
+|   100005  1,2,3      39021/tcp   mountd
+|   100005  1,2,3      58613/udp6  mountd
+|   100021  1,3,4      35215/tcp   nlockmgr
+|   100021  1,3,4      37859/udp6  nlockmgr
+|   100021  1,3,4      38013/tcp6  nlockmgr
+|   100021  1,3,4      55014/udp   nlockmgr
+|   100227  3           2049/tcp   nfs_acl
+|   100227  3           2049/tcp6  nfs_acl
+|   100227  3           2049/udp   nfs_acl
+|_  100227  3           2049/udp6  nfs_acl
+2049/tcp  open  nfs_acl    3 (RPC #100227)
+3333/tcp  open  dec-notes?
+| fingerprint-strings: 
+|   GenericLines, GetRequest, HTTPOptions, JavaRMI, LPDString, NULL, kumo-server: 
+|     UEsDBAoACQAAAFi+hlE66unrHwAAABMAAAAJABwAY3JlZHMudHh0VVQJAANYbs1fWG7NX3V4CwAB
+|     BAAAAAAEAAAAAI+oj/zT9LJIQ2uXbup/hmeBnOqxOFtNmYsvS7Kav9NQSwcIOurp6x8AAAATAAAA
+|     UEsBAh4DCgAJAAAAWL6GUTrq6esfAAAAEwAAAAkAGAAAAAAAAQAAAKSBAAAAAGNyZWRzLnR4dFVU
+|_    BQADWG7NX3V4CwABBAAAAAAEAAAAAFBLBQYAAAAAAQABAE8AAAByAAAAAAA=
+9999/tcp  open  http       Werkzeug httpd 1.0.1 (Python 3.6.9)
+|_http-favicon: Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+|_http-server-header: Werkzeug/1.0.1 Python/3.6.9
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+35215/tcp open  nlockmgr   1-4 (RPC #100021)
+39021/tcp open  mountd     1-3 (RPC #100005)
+39417/tcp open  mountd     1-3 (RPC #100005)
+45077/tcp open  mountd     1-3 (RPC #100005)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3333-TCP:V=7.91%I=7%D=12/6%Time=5FCD70DE%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,124,"UEsDBAoACQAAAFi\+hlE66unrHwAAABMAAAAJABwAY3JlZHMudHh0VVQJAANYbs
+SF:1fWG7NX3V4CwAB\nBAAAAAAEAAAAAI\+oj/zT9LJIQ2uXbup/hmeBnOqxOFtNmYsvS7Kav9
+SF:NQSwcIOurp6x8AAAATAAAA\nUEsBAh4DCgAJAAAAWL6GUTrq6esfAAAAEwAAAAkAGAAAAAA
+SF:AAQAAAKSBAAAAAGNyZWRzLnR4dFVU\nBQADWG7NX3V4CwABBAAAAAAEAAAAAFBLBQYAAAAA
+SF:AQABAE8AAAByAAAAAAA=\n")%r(GenericLines,124,"UEsDBAoACQAAAFi\+hlE66unrH
+SF:wAAABMAAAAJABwAY3JlZHMudHh0VVQJAANYbs1fWG7NX3V4CwAB\nBAAAAAAEAAAAAI\+oj
+SF:/zT9LJIQ2uXbup/hmeBnOqxOFtNmYsvS7Kav9NQSwcIOurp6x8AAAATAAAA\nUEsBAh4DCg
+SF:AJAAAAWL6GUTrq6esfAAAAEwAAAAkAGAAAAAAAAQAAAKSBAAAAAGNyZWRzLnR4dFVU\nBQA
+SF:DWG7NX3V4CwABBAAAAAAEAAAAAFBLBQYAAAAAAQABAE8AAAByAAAAAAA=\n")%r(LPDStri
+SF:ng,124,"UEsDBAoACQAAAFi\+hlE66unrHwAAABMAAAAJABwAY3JlZHMudHh0VVQJAANYbs
+SF:1fWG7NX3V4CwAB\nBAAAAAAEAAAAAI\+oj/zT9LJIQ2uXbup/hmeBnOqxOFtNmYsvS7Kav9
+SF:NQSwcIOurp6x8AAAATAAAA\nUEsBAh4DCgAJAAAAWL6GUTrq6esfAAAAEwAAAAkAGAAAAAA
+SF:AAQAAAKSBAAAAAGNyZWRzLnR4dFVU\nBQADWG7NX3V4CwABBAAAAAAEAAAAAFBLBQYAAAAA
+SF:AQABAE8AAAByAAAAAAA=\n")%r(JavaRMI,124,"UEsDBAoACQAAAFi\+hlE66unrHwAAAB
+SF:MAAAAJABwAY3JlZHMudHh0VVQJAANYbs1fWG7NX3V4CwAB\nBAAAAAAEAAAAAI\+oj/zT9L
+SF:JIQ2uXbup/hmeBnOqxOFtNmYsvS7Kav9NQSwcIOurp6x8AAAATAAAA\nUEsBAh4DCgAJAAA
+SF:AWL6GUTrq6esfAAAAEwAAAAkAGAAAAAAAAQAAAKSBAAAAAGNyZWRzLnR4dFVU\nBQADWG7N
+SF:X3V4CwABBAAAAAAEAAAAAFBLBQYAAAAAAQABAE8AAAByAAAAAAA=\n")%r(kumo-server,
+SF:124,"UEsDBAoACQAAAFi\+hlE66unrHwAAABMAAAAJABwAY3JlZHMudHh0VVQJAANYbs1fW
+SF:G7NX3V4CwAB\nBAAAAAAEAAAAAI\+oj/zT9LJIQ2uXbup/hmeBnOqxOFtNmYsvS7Kav9NQS
+SF:wcIOurp6x8AAAATAAAA\nUEsBAh4DCgAJAAAAWL6GUTrq6esfAAAAEwAAAAkAGAAAAAAAAQ
+SF:AAAKSBAAAAAGNyZWRzLnR4dFVU\nBQADWG7NX3V4CwABBAAAAAAEAAAAAFBLBQYAAAAAAQA
+SF:BAE8AAAByAAAAAAA=\n")%r(GetRequest,124,"UEsDBAoACQAAAFi\+hlE66unrHwAAAB
+SF:MAAAAJABwAY3JlZHMudHh0VVQJAANYbs1fWG7NX3V4CwAB\nBAAAAAAEAAAAAI\+oj/zT9L
+SF:JIQ2uXbup/hmeBnOqxOFtNmYsvS7Kav9NQSwcIOurp6x8AAAATAAAA\nUEsBAh4DCgAJAAA
+SF:AWL6GUTrq6esfAAAAEwAAAAkAGAAAAAAAAQAAAKSBAAAAAGNyZWRzLnR4dFVU\nBQADWG7N
+SF:X3V4CwABBAAAAAAEAAAAAFBLBQYAAAAAAQABAE8AAAByAAAAAAA=\n")%r(HTTPOptions,
+SF:124,"UEsDBAoACQAAAFi\+hlE66unrHwAAABMAAAAJABwAY3JlZHMudHh0VVQJAANYbs1fW
+SF:G7NX3V4CwAB\nBAAAAAAEAAAAAI\+oj/zT9LJIQ2uXbup/hmeBnOqxOFtNmYsvS7Kav9NQS
+SF:wcIOurp6x8AAAATAAAA\nUEsBAh4DCgAJAAAAWL6GUTrq6esfAAAAEwAAAAkAGAAAAAAAAQ
+SF:AAAKSBAAAAAGNyZWRzLnR4dFVU\nBQADWG7NX3V4CwABBAAAAAAEAAAAAFBLBQYAAAAAAQA
+SF:BAE8AAAByAAAAAAA=\n");
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Dec  6 19:01:54 2020 -- 1 IP address (1 host up) scanned in 20.86 seconds

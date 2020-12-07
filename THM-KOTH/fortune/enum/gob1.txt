@@ -1,0 +1,5 @@
+/.htpasswd (Status: 403)
+/.htaccess (Status: 403)
+/_styles (Status: 301)
+/favicon.ico (Status: 200)
+/server-status (Status: 403)
