@@ -263,7 +263,7 @@ postgres:x:114:122:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
 
 
 
-(this is after I changed the root passwd)
+(this is after I changed only the root passwd)
 '''
 root:$6$a.kpa8p7$8MyQWqdXi8kIyb4CgqAViyCa51fW55x0m3paAVcXESs3t03iuUuLq9OQRsoHk7c5HhIsBC5HDddfXWElTK1Ha0:18317:0:99999:7:::
 daemon:*:17953:0:99999:7:::
