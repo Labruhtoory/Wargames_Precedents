@@ -1,0 +1,70 @@
+
+
+
+
+
+			Spamming
+
+$while true; do echo "" > file.txt; echo "AnonXD" > file.txt; sleep 5; done
+$while true; do echo "user" > file.txt; sleep 1; done
+
+
+$crontab -e 
+
+* * * * * echo > /file.txt
+
+* * * * * echo "user" > /file.txt
+
+$service cron start
+
+
+
+
+			Mess with other shells
+*spam other terminals
+$cat /dev/urandom > /dev/pts/1 
+
+*connect to another session try:	
+$screen ls
+$screen -x <PID from previous command>
+
+
+*broadcast a message			
+$wall -n "hello there"			
+
+
+
+
+
+			Kickers 
+
+
+$killall -u user
+
+
+$pkill -9 -t pts/1
+
+
+
+
+			Defense
+			
+*get out of shel spam
+$mesg n
+
+
+
+
+			Patching Services
+
+systemctl list-units --type=service --state=active
+
+systemctl stop sumthing.service
+
+
+
+
+			Open/Close Ports
+
+sudo ufw allow 8080
+sudo ufw deny 8080

@@ -1,0 +1,71 @@
+------------
+          LFI
+     
+?variable=../../../../etc/hosts
+
+
+
+PortSwiggerAcad
+https://portswigger.net/web-security/all-materials
+
+
+
+Business logic vulnerabilities
+https://portswigger.net/web-security/logic-flaws
+
+HTTP Host header attacks
+https://portswigger.net/web-security/host-header
+
+Web cache poisoning
+https://portswigger.net/web-security/web-cache-poisoning
+
+Information disclosure vulnerabilities
+https://portswigger.net/web-security/information-disclosure
+
+SQL injection
+https://portswigger.net/web-security/sql-injection
+
+Cross-site scripting
+https://portswigger.net/web-security/cross-site-scripting
+
+Cross-site request forgery (CSRF)
+https://portswigger.net/web-security/csrf
+
+XML external entity (XXE) injection
+https://portswigger.net/web-security/xxe
+
+Clickjacking (UI redressing)
+https://portswigger.net/web-security/clickjacking
+
+Cross-origin resource sharing (CORS)
+https://portswigger.net/web-security/cors
+
+Server-side request forgery (SSRF)
+https://portswigger.net/web-security/ssrf
+
+HTTP request smuggling
+https://portswigger.net/web-security/request-smuggling
+
+OS command injection
+https://portswigger.net/web-security/os-command-injection
+
+Server-side template injection
+https://portswigger.net/web-security/server-side-template-injection
+
+Insecure deserialization
+https://portswigger.net/web-security/deserialization
+
+Directory traversal
+https://portswigger.net/web-security/file-path-traversal
+
+Access control vulnerabilities and privilege escalation
+https://portswigger.net/web-security/access-control
+
+Authentication
+https://portswigger.net/web-security/authentication
+
+Testing for WebSockets security vulnerabilities
+https://portswigger.net/web-security/websockets
+
+DOM-based vulnerabilities
+https://portswigger.net/web-security/dom-based

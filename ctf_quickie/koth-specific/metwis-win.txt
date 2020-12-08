@@ -1,0 +1,50 @@
+
+          Spamming
+ 
+*youll have to copy each line indv
+
+$copy con spammer.bat         
+:reset
+if 1 == 1  (
+
+echo KING = ME > king.txt
+
+goto reset
+)
+
+*CTRL+z ++ ENTER
+
+       
+       
+       
+       
+       
+         Mess with other shells
+          
+          
+          
+
+          
+          
+          
+          
+          
+          Kickers
+*list logged-in users with their sessions
+quser
+
+*terminate session
+logoff 2
+
+
+*view tasks
+$Tasklist /fo table
+
+*kill a task forcefully
+$Taskkill /IM something.exe /F
+
+
+*Do this once king
+*To end all sessions between the server and the clients connected to it, type:
+
+$net session /delete
