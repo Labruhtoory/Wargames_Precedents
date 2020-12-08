@@ -1,4 +1,19 @@
+			Adduser 
+			
+adduser rot
+passwd rot
+sudo usermod -a -G sudo rot
+usermod -aG wheel username
 
+		
+			
+			Kickers 
+
+
+$killall -u user
+
+
+$pkill -9 -t pts/1
 
 
 
@@ -20,7 +35,11 @@ $service cron start
 
 
 
+
 			Mess with other shells
+			
+			
+			
 *spam other terminals
 $cat /dev/urandom > /dev/pts/1 
 
@@ -36,26 +55,18 @@ $wall -n "hello there"
 
 
 
-			Kickers 
-
-
-$killall -u user
-
-
-$pkill -9 -t pts/1
-
-
-
-
-			Defense
+			Defensee
+			
 			
 *get out of shel spam
 $mesg n
 
 
 
-
+			
 			Patching Services
+			
+			
 
 systemctl list-units --type=service --state=active
 
@@ -64,7 +75,9 @@ systemctl stop sumthing.service
 
 
 
+
 			Open/Close Ports
+
 
 sudo ufw allow 8080
 sudo ufw deny 8080
