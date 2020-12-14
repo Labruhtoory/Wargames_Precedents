@@ -1,0 +1,30 @@
+id_rsa on ftp anon
+
+
+cde6951cf12ff485d6d33ad7a2e6ac49
+
+
+chmod 400 id_rsa
+
+
+ssh -i id_rsa ashu@$IP
+
+
+
+
+
+04461ad0759944a4d743deec6bbd8d54
+
+
+
+sudo su skidy
+
+
+
+sudo git help config
+
+!/bin/sh
+
+
+
+eabe4da21f519b8d6726427df7e683c5
