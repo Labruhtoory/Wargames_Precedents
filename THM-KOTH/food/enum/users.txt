@@ -1,0 +1,8 @@
+food
+dan
+root
+ramen
+bread
+pasta
+tryhackme
+
