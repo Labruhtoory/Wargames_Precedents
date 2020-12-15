@@ -1,0 +1,6 @@
+/.htpasswd (Status: 403)
+/.htaccess (Status: 403)
+/assets (Status: 301)
+/css (Status: 301)
+/images (Status: 301)
+/server-status (Status: 403)
