@@ -1,0 +1,148 @@
+# Nmap 7.91 scan initiated Tue Dec 15 10:47:57 2020 as: nmap -p 22,7546,8127,8986,9999,42956, -A -v -oN nmapAgress.txt 10.10.203.81
+Nmap scan report for 10.10.203.81
+Host is up (0.22s latency).
+
+PORT      STATE SERVICE VERSION
+22/tcp    open  http    Apache httpd 2.4.38 ((Debian))
+| http-methods: 
+|_  Supported Methods: HEAD GET POST OPTIONS
+|_http-server-header: Apache/2.4.38 (Debian)
+|_http-title: Site doesn't have a title (text/html).
+|_ssh-hostkey: ERROR: Script execution failed (use -d to debug)
+7546/tcp  open  ftp     vsftpd 3.0.3
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.2.26.235
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 2
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+8127/tcp  open  http    PHP cli server 5.5 or later
+|_http-favicon: Unknown favicon MD5: BF5963845D95F923F11C7897E0D8D97E
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Hogwart's Royal Entry
+8986/tcp  open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 7e:16:a1:47:0c:d6:c7:08:c9:81:c1:99:ab:83:25:16 (RSA)
+|   256 6b:7b:06:db:d0:7f:cb:b4:ab:b4:31:23:12:32:d2:83 (ECDSA)
+|_  256 f9:f3:e6:72:29:fd:97:e0:be:ca:f7:75:a2:77:b8:3b (ED25519)
+9999/tcp  open  abyss?
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Date: Tue, 15 Dec 2020 19:48:32 GMT
+|     Content-Length: 0
+|   GenericLines, Help, Kerberos, LDAPSearchReq, LPDString, RTSPRequest, SIPOptions, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain; charset=utf-8
+|     Connection: close
+|     Request
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Date: Tue, 15 Dec 2020 19:48:31 GMT
+|_    Content-Length: 0
+42956/tcp open  unknown
+| fingerprint-strings: 
+|   GenericLines: 
+|     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+|     /||\x20 \n // // || \x20 \n // // || \x20 \n // \x20 || // \n // \x20 || // \x20
+|     \x20|| // \n ===========||===========
+|     -------------------------------------------------------~~
+|     -Antioch, Cadmus and Ignotus Peverell
+|     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+|     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+|     Death took a price, but I tell you for free, 
+|     gifts that I had, I gave to these 3..
+|_    last sighted in hogwa
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port9999-TCP:V=7.91%I=7%D=12/15%Time=5FD912F5%P=x86_64-pc-linux-gnu%r(G
+SF:etRequest,4B,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Tue,\x2015\x20Dec\x202
+SF:020\x2019:48:31\x20GMT\r\nContent-Length:\x200\r\n\r\n")%r(HTTPOptions,
+SF:4B,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Tue,\x2015\x20Dec\x202020\x2019:
+SF:48:32\x20GMT\r\nContent-Length:\x200\r\n\r\n")%r(FourOhFourRequest,4B,"
+SF:HTTP/1\.0\x20200\x20OK\r\nDate:\x20Tue,\x2015\x20Dec\x202020\x2019:48:3
+SF:2\x20GMT\r\nContent-Length:\x200\r\n\r\n")%r(GenericLines,67,"HTTP/1\.1
+SF:\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=ut
+SF:f-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(RTSPReques
+SF:t,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain
+SF:;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request
+SF:")%r(Help,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20te
+SF:xt/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x2
+SF:0Request")%r(SSLSessionReq,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCo
+SF:ntent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n
+SF:\r\n400\x20Bad\x20Request")%r(TerminalServerCookie,67,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\n
+SF:Connection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(TLSSessionReq,67,
+SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20
+SF:charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(
+SF:Kerberos,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20tex
+SF:t/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20
+SF:Request")%r(LPDString,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent
+SF:-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n4
+SF:00\x20Bad\x20Request")%r(LDAPSearchReq,67,"HTTP/1\.1\x20400\x20Bad\x20R
+SF:equest\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\
+SF:x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,67,"HTTP/1\.1\x204
+SF:00\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r
+SF:\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port42956-TCP:V=7.91%I=7%D=12/15%Time=5FD912FA%P=x86_64-pc-linux-gnu%r(
+SF:GenericLines,544,"\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SF:~~~~~~\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\|\|\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20/\|\|\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20/\x20\|\|\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20/\x20\x20\|\|\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20/\x20\x20\x20\|\|\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20/\x20\x2
+SF:0\x20\x20\|\|\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20//\x20\x20\x20/\|\|\\\x20\x20
+SF:\x20\\\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20//\x20\x20//\x20\|\|\x20\\\x20\x20\\\n\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20//\x20\x20/
+SF:/\x20\x20\|\|\x20\x20\\\x20\x20\\\n\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20//\x20\x20\\\x20\x20\x20\|\|\x20\x2
+SF:0\x20//\x20\x20\\\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20//\x20\x20\x20\x20\\\x20\x20\|\|\x20\x20//\x20\x20\x20\
+SF:x20\\\x20\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20//\x20\x20\x20\x20\x20\x20\\\x20\|\|\x20//\x20\x20\x20\x20\x20\x20\
+SF:\\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20====
+SF:=======\|\|===========\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\|\|\x20\n
+SF:-------------------------------------------------------~~\n\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20-Antioch,\x20Cadmus\x20and\x20Ignotus\x
+SF:20Peverell\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n
+SF:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n\n\x20\x20
+SF:\x20\x20Death\x20took\x20a\x20price,\x20but\x20I\x20tell\x20you\x20for\
+SF:x20free,\x20\x20\x20\x20\x20\x20\n\x20\x20\x20\x20All\x20the\x20gifts\x
+SF:20that\x20I\x20had,\x20I\x20gave\x20to\x20these\x203\.\.\n\x20\x20\x20\
+SF:x20last\x20sighted\x20in\x20hogwa");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 3.12 (95%), Linux 3.13 (95%), Linux 3.2 - 4.9 (95%), Linux 3.8 - 3.11 (95%), Linux 4.8 (95%), Linux 4.4 (95%), Linux 4.9 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 4.2 (95%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 198.841 days (since Sat May 30 15:39:54 2020)
+Network Distance: 4 hops
+TCP Sequence Prediction: Difficulty=264 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+1   82.75 ms  10.2.0.1
+2   ... 3
+4   221.55 ms 10.10.203.81
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Dec 15 10:51:21 2020 -- 1 IP address (1 host up) scanned in 204.11 seconds
