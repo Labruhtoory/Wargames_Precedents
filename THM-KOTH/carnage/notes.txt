@@ -209,3 +209,7 @@ john    ALL=(ALL:ALL) ALL
 74686d7b38393334623432653339656133613135323962333633393039353466306632617d
 (from hex)
 thm{8934b42e39ea3a1529b36390954f0f2a}
+
+
+*cannot write to king.txt, but can append!!!
+echo 'user' >> king.txt
