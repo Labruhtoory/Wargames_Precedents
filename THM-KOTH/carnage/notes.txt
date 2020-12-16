@@ -213,3 +213,21 @@ thm{8934b42e39ea3a1529b36390954f0f2a}
 
 *cannot write to king.txt, but can append!!!
 echo 'user' >> king.txt
+
+
+$find -name "flag*.txt"
+./var/www/html/web3/flag.txt
+./var/www/html/web2/flag.txt
+./root/flag4.txt
+./home/duku/flag3.txt
+./home/yoda/flag2.txt
+./home/bobba/flag1.txt
+
+
+/var/www/html/web3/flag.txt 
+thm{43f20e3ed108dda8c2383e5fa0286854}
+
+
+/home/bobba/flag1.txt
+guz{06834nnp0714586s2o2s925ps49opq31}
+
