@@ -8,8 +8,21 @@ got lucky roll
 
 
 
+*Nmap agressive scan
 
 UEsDBAoACQAAAFi+hlE66unrHwAAABMAAAAJABwAY3JlZHMudHh0VVQJAANYbs1fWG7NX3V4CwABBAAAAAAEAAAAAI+oj/zT9LJIQ2uXbup/hmeBnOqxOFtNmYsvS7Kav9NQSwcIOurp6x8AAAATAAAAUEsBAh4DCgAJAAAAWL6GUTrq6esfAAAAEwAAAAkAGAAAAAAAAQAAAKSBAAAAAGNyZWRzLnR4dFVUBQADWG7NX3V4CwABBAAAAAAEAAAAAFBLBQYAAAAAAQABAE8AAAByAAAAAAA=
+
+
+*base64
+
+
+*base64 to file
+
+
+
+
+*use fcrackzip
+
 
 chubby
 
@@ -18,13 +31,8 @@ fortuna:OGYwY2E2MT
 
 
 
-fortuna desktop/chess
 
-7b1ded3f11db0ff3a0deba11f92364c7
-
-
-
-
+*gtfobins
 
 sudo pico
 ^R^X
@@ -119,3 +127,18 @@ statd:x:112:65534::/var/lib/nfs:/usr/sbin/nologin
 
 
 
+
+
+
+/home/fortuna/chess
+7b1ded3f11db0ff3a0deba11f92364c7
+
+
+/geama/flag
+d87728453a7a55bddb8e62b8c3aab359
+
+/usr/local/games/flag
+9acf0d33cf153a52d2cc58437424a1ec
+
+/usr/games/flag
+3373314cd03e4f4eb267e6e3c3ed0ae1
