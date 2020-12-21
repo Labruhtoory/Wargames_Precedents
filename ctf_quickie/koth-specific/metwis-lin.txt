@@ -65,9 +65,9 @@ $mesg n
 
 			
 			Patching Services
+			#some of this is against rules on THM-KOTH
 			
 			
-
 systemctl list-units --type=service --state=active
 
 systemctl stop sumthing.service
@@ -76,7 +76,8 @@ systemctl stop sumthing.service
 
 
 
-			Open/Close Ports
+			Open/Close Ports 
+			#this is against the rules on THM-KOTH
 
 
 sudo ufw allow 8080
