@@ -147,11 +147,7 @@ ssh ramen@10.10.100.44
 					# privelage escalation
 					
 '''
-sudo vi /etc/sudoers
-'''
-
-'''
-ramen	ALL=(ALL:ALL) ALL
+/usr/bin/vim.basic /etc/passwd
 '''
 
 
@@ -166,12 +162,12 @@ thm{2f30841ff8d9646845295135adda8332}
 '''
 
 '''
-/home/bread
+/home/bread/flag
 thm{7baf5aa8491a4b7b1c2d231a24aec575}
 '''
 
 '''
-/root
+/root/flag
 thm{9f1ee18d3021d135b03b943cc58f34db}
 '''
 
@@ -179,6 +175,11 @@ thm{9f1ee18d3021d135b03b943cc58f34db}
 '''
 /home/tryhackme
 thm{5a926ab5d3561e976f4ae5a7e2d034fe}
+'''
+
+'''
+/var/flag
+thm{0c48608136e6f8c86aecdb5d4c3d7ba8}
 '''
 
 
