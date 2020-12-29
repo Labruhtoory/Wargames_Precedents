@@ -1,0 +1,115 @@
+# Nmap 7.91 scan initiated Tue Dec 29 05:12:52 2020 as: nmap -Pn -p 80,1337,3306,5555,8080,9999,14440 -A -v -oN nmapAgress.txt 10.10.36.190
+adjust_timeouts2: packet supposedly had rtt of -53028 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -53028 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -50075 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -50075 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -153939 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -153939 microseconds.  Ignoring time.
+Nmap scan report for 10.10.36.190
+Host is up (0.19s latency).
+
+PORT      STATE  SERVICE VERSION
+80/tcp    open   http    Apache httpd 2.4.18 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html).
+1337/tcp  open   ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 65:48:b1:90:10:f1:9e:36:4a:e1:36:4a:a9:f0:72:21 (RSA)
+|   256 56:2a:8a:33:cb:aa:22:72:28:1e:a1:6a:ff:5a:99:55 (ECDSA)
+|_  256 51:df:b6:32:a9:5f:46:1a:42:3b:7f:58:94:47:7c:6c (ED25519)
+3306/tcp  open   mysql   MySQL 5.7.19-0ubuntu0.16.04.1
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.7.19-0ubuntu0.16.04.1
+|   Thread ID: 9
+|   Capabilities flags: 63487
+|   Some Capabilities: Support41Auth, LongColumnFlag, SupportsCompression, SupportsTransactions, Speaks41ProtocolOld, IgnoreSigpipes, SupportsLoadDataLocal, IgnoreSpaceBeforeParenthesis, LongPassword, InteractiveClient, ConnectWithDatabase, DontAllowDatabaseTableColumn, ODBCClient, FoundRows, Speaks41ProtocolNew, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments
+|   Status: Autocommit
+|   Salt: 47s\\x14 \x12\x02:\x17\x10q.5\x7F\x16	C&1
+|_  Auth Plugin Name: mysql_native_password
+5555/tcp  open   http    nginx 1.10.3 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: nginx/1.10.3 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+8080/tcp  open   http    nostromo 1.9.6
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: nostromo 1.9.6
+|_http-title: Welcome
+9999/tcp  open   abyss?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 200 OK
+|     Date: Tue, 29 Dec 2020 10:08:58 GMT
+|     Content-Length: 0
+|   GenericLines, Help, Kerberos, LDAPSearchReq, LPDString, RTSPRequest, SIPOptions, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain; charset=utf-8
+|     Connection: close
+|     Request
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Date: Tue, 29 Dec 2020 10:08:57 GMT
+|_    Content-Length: 0
+14440/tcp closed unknown
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9999-TCP:V=7.91%I=7%D=12/29%Time=5FEB012B%P=x86_64-pc-linux-gnu%r(G
+SF:etRequest,4B,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Tue,\x2029\x20Dec\x202
+SF:020\x2010:08:57\x20GMT\r\nContent-Length:\x200\r\n\r\n")%r(HTTPOptions,
+SF:4B,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Tue,\x2029\x20Dec\x202020\x2010:
+SF:08:57\x20GMT\r\nContent-Length:\x200\r\n\r\n")%r(FourOhFourRequest,4B,"
+SF:HTTP/1\.0\x20200\x20OK\r\nDate:\x20Tue,\x2029\x20Dec\x202020\x2010:08:5
+SF:8\x20GMT\r\nContent-Length:\x200\r\n\r\n")%r(GenericLines,67,"HTTP/1\.1
+SF:\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=ut
+SF:f-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(RTSPReques
+SF:t,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain
+SF:;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request
+SF:")%r(Help,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20te
+SF:xt/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x2
+SF:0Request")%r(SSLSessionReq,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCo
+SF:ntent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n
+SF:\r\n400\x20Bad\x20Request")%r(TerminalServerCookie,67,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\n
+SF:Connection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(TLSSessionReq,67,
+SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20
+SF:charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(
+SF:Kerberos,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20tex
+SF:t/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20
+SF:Request")%r(LPDString,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent
+SF:-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n4
+SF:00\x20Bad\x20Request")%r(LDAPSearchReq,67,"HTTP/1\.1\x20400\x20Bad\x20R
+SF:equest\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\
+SF:x20close\r\n\r\n400\x20Bad\x20Request")%r(SIPOptions,67,"HTTP/1\.1\x204
+SF:00\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r
+SF:\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request");
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=12/29%OT=80%CT=14440%CU=34721%PV=Y%DS=2%DC=T%G=Y%TM=5F
+OS:EB019F%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=109%TI=Z%CI=I%II=I%TS=
+OS:8)SEQ(SP=105%GCD=1%ISR=109%TI=Z%CI=I%TS=8)SEQ(SP=106%GCD=1%ISR=10A%TI=Z%
+OS:TS=8)OPS(O1=M505ST11NW7%O2=M505ST11NW7%O3=M505NNT11NW7%O4=M505ST11NW7%O5
+OS:=M505ST11NW7%O6=M505ST11)WIN(W1=68DF%W2=68DF%W3=68DF%W4=68DF%W5=68DF%W6=
+OS:68DF)ECN(R=Y%DF=Y%T=40%W=6903%O=M505NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%
+OS:A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0
+OS:%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S
+OS:=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R
+OS:=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N
+OS:%T=40%CD=S)
+
+Uptime guess: 0.000 days (since Tue Dec 29 05:14:37 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 14440/tcp)
+HOP RTT       ADDRESS
+1   184.02 ms 10.9.0.1
+2   184.05 ms 10.10.36.190
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Dec 29 05:14:55 2020 -- 1 IP address (1 host up) scanned in 122.48 seconds
