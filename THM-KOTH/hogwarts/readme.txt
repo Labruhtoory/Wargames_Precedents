@@ -237,6 +237,13 @@ websites
 '''
 
 
+encrypted?
+'''
+/var/www/mystaticsite/secrets.txt.enc
+U2FsdGVkX18IKhVL9uuuhJZ0EsTy+3wAG/JxTqpEK8YOPFilg30kStwV1o4r4sCz
+'''
+
+
 >root stuff 
 '''
 root:x:0:0:root:/root:/bin/bash
