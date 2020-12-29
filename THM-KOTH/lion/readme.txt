@@ -139,7 +139,7 @@ ssh -i gloria_id_rsa gloria@10.10.36.190 -p 1337
 
 
 '''
-
+tmux -S /.dev/session attach -t 0
 '''
 
 
