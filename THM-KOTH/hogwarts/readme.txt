@@ -158,6 +158,23 @@ THM{I_unarm3d_dumbled0re}
 THM{Yeah_1_swallowed_the_sn1tch.}
 '''
 
+'''
+/var/www/mymainsite/cat conn.php
+THM{wait-for-your-letter!}
+'''
+
+'''
+mysql>basement>mosnters>
+THM{I-can-be-controlled-by-a-harp}
+'''
+
+'''
+'''
+
+
+6/7 flags found
+
+
 
 
 >users
@@ -171,32 +188,54 @@ hermoine
 '''
 
 
+
+
 >passwds
 '''
-(neville's passwd changed after box reset so it could vary)
+(passwds changed after box reset so it could vary)
 '''
 
-'''
-'''
+
+
 
 >files and dirs
+
+
+ftp
 '''
-ftp 10.10.203.81 7546
 .../.../.I_saved_it_harry.zip
 '''
 
+
+sudo stuff
 '''
 /usr/bin/ip
 /bin/date
 /usr/bin/easy_install
 '''
 
+
+
+
+mysql
 '''
-http
-/robots.txt
-/interactive
-/login.php
+db:students
+tables: non_magic
+contents: hermoine | @8p9o1yl4f#nd2jk9@d!yfvbs 
+
+
+db:basement
+tables:monsters
+contents: fluffy | THM{I-can-be-controlled-by-a-harp}
 '''
+
+
+websites
+'''
+/var/www/mymainsite/conn.php
+/var/www/mystaticsite/resumetaker.php
+'''
+
 
 >root stuff 
 '''
