@@ -137,7 +137,7 @@ sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/ba
 '''
 
 '''
-/home/donkey
+/home/donkey/
 974acecd51cc45c843062fdac6235e97
 '''
 
