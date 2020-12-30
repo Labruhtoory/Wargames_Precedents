@@ -54,7 +54,7 @@ gdb -nx -ex 'python import os; os.execl("/bin/sh", "sh", "-p")' -ex quit
 6f960e8f2ea8e3de92f192fae492ec59
 
 
-/home/donkey
+/home/donkey/
 974acecd51cc45c843062fdac6235e97
 
 
@@ -128,5 +128,3 @@ af847d9403e2106a3cb2fd69f33b2d5e
 e000490068742c9826b7dccebbfbe54fe01f2f76a69b8df9e96ea5fca359f1f1
 
 
-
-/usr/local/go/src/flag
