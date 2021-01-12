@@ -1,0 +1,136 @@
+# Nmap 7.91 scan initiated Tue Jan 12 17:29:46 2021 as: nmap -Pn -p 22,80,139,445,3306,5000,6555,8080,9999 -A -v -oN nmapinit.txt 10.10.30.73
+Nmap scan report for 10.10.30.73
+Host is up (0.21s latency).
+
+PORT     STATE SERVICE     VERSION
+22/tcp   open  ssh         OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 46:6c:5a:31:5f:c1:1f:f3:65:e7:64:f2:c5:f5:59:d8 (RSA)
+|   256 5d:a5:8a:af:1e:21:48:7a:04:22:3e:4a:f5:e4:5b:02 (ECDSA)
+|_  256 6a:44:1c:e1:15:c9:5e:94:da:06:8d:db:d2:bc:66:54 (ED25519)
+80/tcp   open  http        Apache httpd 2.4.6 ((CentOS) PHP/7.3.16)
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.6 (CentOS) PHP/7.3.16
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: SAMBA)
+445/tcp  open  netbios-ssn Samba smbd 4.9.1 (workgroup: SAMBA)
+3306/tcp open  mysql       MariaDB (unauthorized)
+5000/tcp open  http        Werkzeug httpd 1.0.0 (Python 3.6.8)
+| http-methods: 
+|_  Supported Methods: POST GET OPTIONS HEAD
+|_http-server-header: Werkzeug/1.0.0 Python/3.6.8
+|_http-title: Tyler's file upload
+6555/tcp open  unknown
+8080/tcp open  http        nginx 1.16.1
+|_http-favicon: Unknown favicon MD5: B8211E9B75068FB852BFB155D9A1A2EE
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: nginx/1.16.1
+| http-title: LibreNMS
+|_Requested resource was http://10.10.30.73:8080/login
+|_http-trane-info: Problem with XML parsing of /evox/about
+9999/tcp open  abyss?
+| fingerprint-strings: 
+|   FourOhFourRequest, HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Accept-Ranges: bytes
+|     Content-Length: 1
+|     Content-Type: text/plain; charset=utf-8
+|     Last-Modified: Thu, 26 Mar 2020 11:36:37 GMT
+|     Date: Tue, 12 Jan 2021 22:29:55 GMT
+|   GenericLines, Help, Kerberos, LPDString, RTSPRequest, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain; charset=utf-8
+|     Connection: close
+|     Request
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Accept-Ranges: bytes
+|     Content-Length: 1
+|     Content-Type: text/plain; charset=utf-8
+|     Last-Modified: Thu, 26 Mar 2020 11:36:37 GMT
+|_    Date: Tue, 12 Jan 2021 22:29:54 GMT
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9999-TCP:V=7.91%I=7%D=1/12%Time=5FFE22E2%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,B9,"HTTP/1\.0\x20200\x20OK\r\nAccept-Ranges:\x20bytes\r\nConte
+SF:nt-Length:\x201\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nLas
+SF:t-Modified:\x20Thu,\x2026\x20Mar\x202020\x2011:36:37\x20GMT\r\nDate:\x2
+SF:0Tue,\x2012\x20Jan\x202021\x2022:29:54\x20GMT\r\n\r\n\n")%r(HTTPOptions
+SF:,B9,"HTTP/1\.0\x20200\x20OK\r\nAccept-Ranges:\x20bytes\r\nContent-Lengt
+SF:h:\x201\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nLast-Modifi
+SF:ed:\x20Thu,\x2026\x20Mar\x202020\x2011:36:37\x20GMT\r\nDate:\x20Tue,\x2
+SF:012\x20Jan\x202021\x2022:29:55\x20GMT\r\n\r\n\n")%r(FourOhFourRequest,B
+SF:9,"HTTP/1\.0\x20200\x20OK\r\nAccept-Ranges:\x20bytes\r\nContent-Length:
+SF:\x201\r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nLast-Modified
+SF::\x20Thu,\x2026\x20Mar\x202020\x2011:36:37\x20GMT\r\nDate:\x20Tue,\x201
+SF:2\x20Jan\x202021\x2022:29:55\x20GMT\r\n\r\n\n")%r(GenericLines,67,"HTTP
+SF:/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20chars
+SF:et=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(RTSPR
+SF:equest,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/
+SF:plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Re
+SF:quest")%r(Help,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\
+SF:x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20B
+SF:ad\x20Request")%r(SSLSessionReq,67,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20clos
+SF:e\r\n\r\n400\x20Bad\x20Request")%r(TerminalServerCookie,67,"HTTP/1\.1\x
+SF:20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20charset=utf-
+SF:8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(TLSSessionRe
+SF:q,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain
+SF:;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request
+SF:")%r(Kerberos,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x
+SF:20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Ba
+SF:d\x20Request")%r(LPDString,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nCo
+SF:ntent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n
+SF:\r\n400\x20Bad\x20Request");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 3.10 - 3.13 (95%), ASUS RT-N56U WAP (Linux 3.4) (95%), Linux 3.16 (95%), Linux 3.1 (93%), Linux 3.2 (93%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (92%), Linux 3.10 (92%), Linux 3.18 (92%), Linux 3.2 - 4.9 (92%), Linux 3.4 - 3.10 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 49.710 days (since Tue Nov 24 00:29:53 2020)
+Network Distance: 4 hops
+TCP Sequence Prediction: Difficulty=254 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: TYLER
+
+Host script results:
+|_clock-skew: mean: 1h40m01s, deviation: 2h53m12s, median: 0s
+| nbstat: NetBIOS name: TYLER, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   TYLER<00>            Flags: <unique><active>
+|   TYLER<03>            Flags: <unique><active>
+|   TYLER<20>            Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   SAMBA<00>            Flags: <group><active>
+|   SAMBA<1d>            Flags: <unique><active>
+|_  SAMBA<1e>            Flags: <group><active>
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.9.1)
+|   Computer name: tyler
+|   NetBIOS computer name: TYLER\x00
+|   Domain name: \x00
+|   FQDN: tyler
+|_  System time: 2021-01-12T17:31:33-05:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2021-01-12T22:31:33
+|_  start_date: N/A
+
+TRACEROUTE (using port 139/tcp)
+HOP RTT       ADDRESS
+1   72.77 ms  10.2.0.1
+2   ... 3
+4   214.24 ms 10.10.30.73
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jan 12 17:31:41 2021 -- 1 IP address (1 host up) scanned in 114.69 seconds
