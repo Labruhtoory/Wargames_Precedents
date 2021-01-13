@@ -231,3 +231,15 @@ thm{43f20e3ed108dda8c2383e5fa0286854}
 /home/bobba/flag1.txt
 guz{06834nnp0714586s2o2s925ps49opq31}
 
+
+
+/var/www/html/web2/3ef043d9e9c5d19b9db6d87c6f23b290/dice.php
+
+
+/var/www/html/web2/upload/
+0c03ca8d42e1c62e39fc5ee7e80b8e89
+c2345bd94ca36fd15d1977021fbdaf61
+689841a05d814af59e08cd3f2a5e89ff
+d7bad15a4d5a1741ef5d208accb1f2af
+
+
