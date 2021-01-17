@@ -1,2 +1,2 @@
 # Wargames
-notes 4 playing wargames such as ctf, koth, etc...
+Notes and Reports on wargames I have played.
