@@ -1,8 +1,9 @@
 /robots.txt
 /interactive
 
-anon ftp
+###anon ftp
 
+zip2john .I_saved_it_harry.zip
 
 paris            (I_saved_it_harry.zip/boot/.pass)
 
@@ -180,3 +181,59 @@ content: fluffy | THM{I-can-be-controlled-by-a-harp}
 
 /var/www/mystaticsite/secrets.txt.enc
 U2FsdGVkX18IKhVL9uuuhJZ0EsTy+3wAG/JxTqpEK8YOPFilg30kStwV1o4r4sCz
+
+
+
+
+
+                                        *further enum is after a couple iterations of the box
+
+*ZAP's spider
+###http:22
+
+style.cloufare.css
+'''
+Resurrection stone: ft4zselpuypqmhh!pc@ooo14f 
+'''
+
+
+###http:9371
+
+login.css
+'''
+/*Elder wand: 38m1recnv6aboxvkfmcs1752#  */
+'''
+
+
+
+
+/var/www/html/mymainsite/robots.txt
+
+63 72 65 64 73 2e 74 78 74 20 6d 61 79 62 65 3f
+
+
+/var/www/myststicsite
+
+secrets.txt.enc
+U2FsdGVkX18n8uTxr94qQ8+RDDC4ikXf3MNH4YJWy3gUy0DK/EUXJGI9A4pmcJy3
+
+
+
+###final flag
+
+
+/etc/room_of_requirement
+
+Ah, Looking for the diadem? I've told this to Harry already.
+Another boy asked for it, years ago.
+If you have to ask, you
+ll never know. If you know, you need only ask.
+-Helena Rawenclaw
+The room is located on the <>seventh floor<> in the <>left corridor<> of the Hogwarts castle and has a <>hidden<> entrance opposite the tapestry depicting the attempt of Barnabas the Barmy to teach trolls ballet. The way to open the room is to walk past it thinking hard about what you need, and the door will appear.
+
+Invisibilty cloak: a81!0x0v5e3soyz!m!lc#v2n8 
+
+
+/etc/left_corridor/seventh_floor/.entrance
+
+THM{That-boy-was-Tom-Riddle}
