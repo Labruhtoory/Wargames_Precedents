@@ -169,10 +169,9 @@ THM{I-can-be-controlled-by-a-harp}
 '''
 
 '''
+etc/left_corridor/seventh_floor/.entrance
+THM{That-boy-was-Tom-Riddle}
 '''
-
-
-6/7 flags found
 
 
 
@@ -214,6 +213,19 @@ sudo stuff
 /usr/bin/easy_install
 '''
 
+
+###http:22
+style.cloufare.css
+'''
+Resurrection stone: ft4zselpuypqmhh!pc@ooo14f 
+'''
+
+
+###http:9371
+login.css
+'''
+/*Elder wand: 38m1recnv6aboxvkfmcs1752#  */
+'''
 
 
 
