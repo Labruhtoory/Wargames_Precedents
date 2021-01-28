@@ -212,11 +212,6 @@ login.css
 63 72 65 64 73 2e 74 78 74 20 6d 61 79 62 65 3f
 
 
-/var/www/myststicsite
-
-secrets.txt.enc
-U2FsdGVkX18n8uTxr94qQ8+RDDC4ikXf3MNH4YJWy3gUy0DK/EUXJGI9A4pmcJy3
-
 
 
 ###final flag
