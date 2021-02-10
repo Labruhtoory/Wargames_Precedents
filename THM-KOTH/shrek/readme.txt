@@ -157,7 +157,14 @@ mysql>cms>flag
 af847d9403e2106a3cb2fd69f33b2d5e
 '''
 
-6/8 flags found....
+'''
+/var/lib/docker/overlay2/8039e912cd29e964102163c37a1f05795ea99e7da6c1a800dd9749417d88c680/diff/root/flag.txt
+/var/lib/docker/overlay2/39248c1cc80e14c3df0232591f5c5b7c76e1d125eb0e4f7c0520cfb23aed23ff/diff/root/flag.txt
+456ca96a9ba8a9f527089ddde0efc92d
+'''
+
+
+7/8 flags found....
 
 
 >users
