@@ -1,0 +1,7 @@
+/ltdis.sh static 
+
+Any strings found in static have been written to static.ltdis.strings.txt with file offset
+
+cat static.ltdis.strings.txt | grep pico
+
+picoCTF{d15a5m_t34s3r_f5aeda17}
