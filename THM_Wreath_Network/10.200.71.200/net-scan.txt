@@ -1,0 +1,18 @@
+# Nmap 6.49BETA1 scan initiated Thu Jun 24 16:48:37 2021 as: ./nmap-sniperop -sn -oN nmap-res-sniperop 10.200.71.1-255
+Cannot find nmap-payloads. UDP payloads are disabled.
+Nmap scan report for ip-10-200-71-1.eu-west-1.compute.internal (10.200.71.1)
+Cannot find nmap-mac-prefixes: Ethernet vendor correlation will not be performed
+Host is up (0.00058s latency).
+MAC Address: 02:24:F4:FC:6C:59 (Unknown)
+Nmap scan report for ip-10-200-71-100.eu-west-1.compute.internal (10.200.71.100)
+Host is up (0.00013s latency).
+MAC Address: 02:6F:71:88:6B:87 (Unknown)
+Nmap scan report for ip-10-200-71-150.eu-west-1.compute.internal (10.200.71.150)
+Host is up (-0.10s latency).
+MAC Address: 02:09:26:B8:2A:73 (Unknown)
+Nmap scan report for ip-10-200-71-250.eu-west-1.compute.internal (10.200.71.250)
+Host is up (0.00046s latency).
+MAC Address: 02:3E:10:BB:03:35 (Unknown)
+Nmap scan report for ip-10-200-71-200.eu-west-1.compute.internal (10.200.71.200)
+Host is up.
+# Nmap done at Thu Jun 24 16:48:41 2021 -- 255 IP addresses (5 hosts up) scanned in 3.73 seconds

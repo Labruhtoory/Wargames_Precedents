@@ -1,0 +1,83 @@
+# Nmap 7.91 scan initiated Tue Jun 22 12:07:20 2021 as: nmap -Pn -p 22,80,443,3306,8000,8100,10000,47000 -v -sC -sV -oN nmapinit.txt 10.200.71.200
+Nmap scan report for example.thm (10.200.71.200)
+Host is up (0.18s latency).
+
+PORT      STATE  SERVICE       VERSION
+22/tcp    open   ssh           OpenSSH 8.0 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 9c:1b:d4:b4:05:4d:88:99:ce:09:1f:c1:15:6a:d4:7e (RSA)
+|   256 93:55:b4:d9:8b:70:ae:8e:95:0d:c2:b6:d2:03:89:a4 (ECDSA)
+|_  256 f0:61:5a:55:34:9b:b7:b8:3a:46:ca:7d:9f:dc:fa:12 (ED25519)
+80/tcp    open   http          Apache httpd 2.4.37 ((centos) OpenSSL/1.1.1c)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.37 (centos) OpenSSL/1.1.1c
+|_http-title: Did not follow redirect to https://thomaswreath.thm
+443/tcp   open   ssl/http      Apache httpd 2.4.37 ((centos) OpenSSL/1.1.1c)
+| http-methods: 
+|   Supported Methods: HEAD GET POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.4.37 (centos) OpenSSL/1.1.1c
+|_http-title: Thomas Wreath | Developer
+| ssl-cert: Subject: commonName=thomaswreath.thm/organizationName=Thomas Wreath Development/stateOrProvinceName=East Riding Yorkshire/countryName=GB
+| Issuer: commonName=thomaswreath.thm/organizationName=Thomas Wreath Development/stateOrProvinceName=East Riding Yorkshire/countryName=GB
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-06-22T07:30:04
+| Not valid after:  2022-06-22T07:30:04
+| MD5:   f59b 98a6 94a3 37e7 8e2d 04f6 3104 ea6e
+|_SHA-1: 9d91 5816 9540 9721 506d abaa 1ec9 4ddb 4dc6 5139
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+3306/tcp  open   mysql?
+| fingerprint-strings: 
+|   FourOhFourRequest, JavaRMI, LANDesk-RC, LDAPBindReq, NULL, RTSPRequest, SMBProgNeg, SSLSessionReq, WMSRequest, X11Probe, afp, giop: 
+|_    Host 'ip-10-50-65-25.eu-west-1.compute.internal' is not allowed to connect to this MariaDB server
+8000/tcp  closed http-alt
+8100/tcp  closed xprint-server
+10000/tcp open   http          MiniServ 1.890 (Webmin httpd)
+|_http-favicon: Unknown favicon MD5: BAC253BFC8908D7A4AA486F13B7A2386
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Site doesn't have a title (text/html; Charset=iso-8859-1).
+47000/tcp open   http          PHP cli server 5.5 or later
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: 404 Not Found
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3306-TCP:V=7.91%I=7%D=6/22%Time=60D20ABA%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,68,"d\0\0\x01\xffj\x04Host\x20'ip-10-50-65-25\.eu-west-1\.compute\.i
+SF:nternal'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20Mari
+SF:aDB\x20server")%r(RTSPRequest,68,"d\0\0\x01\xffj\x04Host\x20'ip-10-50-6
+SF:5-25\.eu-west-1\.compute\.internal'\x20is\x20not\x20allowed\x20to\x20co
+SF:nnect\x20to\x20this\x20MariaDB\x20server")%r(SSLSessionReq,68,"d\0\0\x0
+SF:1\xffj\x04Host\x20'ip-10-50-65-25\.eu-west-1\.compute\.internal'\x20is\
+SF:x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")
+SF:%r(SMBProgNeg,68,"d\0\0\x01\xffj\x04Host\x20'ip-10-50-65-25\.eu-west-1\
+SF:.compute\.internal'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20t
+SF:his\x20MariaDB\x20server")%r(X11Probe,68,"d\0\0\x01\xffj\x04Host\x20'ip
+SF:-10-50-65-25\.eu-west-1\.compute\.internal'\x20is\x20not\x20allowed\x20
+SF:to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(FourOhFourRequest,
+SF:68,"d\0\0\x01\xffj\x04Host\x20'ip-10-50-65-25\.eu-west-1\.compute\.inte
+SF:rnal'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB
+SF:\x20server")%r(LDAPBindReq,68,"d\0\0\x01\xffj\x04Host\x20'ip-10-50-65-2
+SF:5\.eu-west-1\.compute\.internal'\x20is\x20not\x20allowed\x20to\x20conne
+SF:ct\x20to\x20this\x20MariaDB\x20server")%r(LANDesk-RC,68,"d\0\0\x01\xffj
+SF:\x04Host\x20'ip-10-50-65-25\.eu-west-1\.compute\.internal'\x20is\x20not
+SF:\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(Jav
+SF:aRMI,68,"d\0\0\x01\xffj\x04Host\x20'ip-10-50-65-25\.eu-west-1\.compute\
+SF:.internal'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20Ma
+SF:riaDB\x20server")%r(WMSRequest,68,"d\0\0\x01\xffj\x04Host\x20'ip-10-50-
+SF:65-25\.eu-west-1\.compute\.internal'\x20is\x20not\x20allowed\x20to\x20c
+SF:onnect\x20to\x20this\x20MariaDB\x20server")%r(afp,68,"d\0\0\x01\xffj\x0
+SF:4Host\x20'ip-10-50-65-25\.eu-west-1\.compute\.internal'\x20is\x20not\x2
+SF:0allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server")%r(giop,6
+SF:8,"d\0\0\x01\xffj\x04Host\x20'ip-10-50-65-25\.eu-west-1\.compute\.inter
+SF:nal'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20MariaDB\
+SF:x20server");
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jun 22 12:08:19 2021 -- 1 IP address (1 host up) scanned in 58.44 seconds
